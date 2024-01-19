@@ -1,0 +1,14 @@
+<mat-drawer-container autosize>
+    <mat-drawer #drawer opened="true" mode="side">
+        <div style="padding: 16px;">
+            <button mat-button style="padding: 8px;" routerLink="counter"><mat-icon>dashboard</mat-icon>Dashboard</button><br>
+            <button mat-button style="padding: 8px;"><mat-icon>home</mat-icon>Home</button><br>
+            <button mat-button style="padding: 8px;" routerLink="user"><mat-icon>help</mat-icon>Aggiungi bestemmiatore</button><br>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content style="height: 100vh;">   
+        <div style="text-align: center;">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>

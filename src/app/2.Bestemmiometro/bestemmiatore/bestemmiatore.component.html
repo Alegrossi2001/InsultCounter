@@ -1,0 +1,14 @@
+<div class="form-container">
+    <form (ngSubmit)="addPerson()" #personForm="ngForm">
+      <mat-form-field color="primary" appearance="fill">
+        <input matInput placeholder="Name" name="name" [(ngModel)]="person.name" required style="height: 40px; font-size: 16px;">
+      </mat-form-field>
+  
+      <mat-form-field color="primary" appearance="fill">
+        <input matInput placeholder="Surname" name="surname" [(ngModel)]="person.surname" required style="height: 40px; font-size: 16px;">
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit" [disabled]="!personForm.valid">
+        Add Person
+      </button>
+    </form>
